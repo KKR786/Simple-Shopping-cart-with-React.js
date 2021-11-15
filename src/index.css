@@ -1,13 +1,177 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Georgia',serif;
+  background-color: thistle;
+  /*background-image: url("paper.gif");*/
+}
+#title {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.productBtn {
+  display: flex;
+  justify-content: center;
+}
+#headBtn {
+  font-family: 'Georgia',serif;
+  font-weight: bolder;
+  background-color: violet;
+  padding: 6px;
+  border: 0.1rem black solid;
+  cursor: pointer;
+  font-size: 1rem;
+}
+#checkout {
+  font-family: 'Georgia',serif;
+  font-weight: bolder;
+  background-color: violet;
+  padding: 6px;
+  border: 0.1rem black solid;
+  cursor: pointer;
+  font-size: 1rem;
+  
+}
+#empty {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+#price {
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+h1,h2,h3 {
+  margin: 0.5rem 0;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.head {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#main {
+  margin-top: 5rem;
+}
+.col-1 {
+  flex: 1;
+
+}
+#btn {
+  background-color: palegoldenrod;
+  
+  cursor: pointer;
+}
+.btnDiv {
+  display: flex;
+  background-color: palegoldenrod;
+  
+  cursor: pointer;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 648px) {
+  #checkout {
+    font-family: 'Georgia',serif;
+    font-weight: bolder;
+    background-color: violet;
+    padding: 6px;
+    border: 0.1rem black solid;
+    margin: 1rem 15rem;
+    cursor: pointer;
+    font-size: 1rem;
+    
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (min-width: 700px) {
+  #flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+.pos {
+  text-align: center;
+  border: 0.14rem olive solid;
+  max-width: 31rem;
+  margin-left: 2px;
+}
+}
+
+.col-2 {
+  display: flex;
+  justify-content: space-between;
+  font-family:'Courier New', Courier, monospace;
+}
+.block {
+  background-color: black;
+  padding: 0.4rem;
+  margin: 0rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.text-right {
+  text-align: right;
+  font-family:'Courier New', Courier, monospace;
+}
+.pos {
+  text-align: center;
+  border: 0.14rem olive solid;
+  
+}
+#pic {
+  padding-top: 1rem;
+  max-height: 9rem;
+  margin: auto;
+  display: block;
+}
+#btn_pos {
+  padding-left: 12.5rem;
+  padding-right: 12.5rem;
+}
+button#cartBtn {
+  font-family: 'Georgia',serif;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  padding: 5px;
+  margin: 5px 2px 2px 0px;
+  border-radius: 0.2rem;
+  border: 0.15rem #404040 solid;
+  background-color: #1c87c9;
+  width: fit-content;
+  cursor: pointer;
+}
+button.add {
+  background-color: green;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+button.remove {
+  background-color: red;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+button.badge {
+  background-color: white;
+  border: 0.1rem red solid;
+  height: 1.4rem;
+  color: black;
+  width: 1.5rem;
+  border-radius: 1rem;
+  font-weight: bolder;
 }
