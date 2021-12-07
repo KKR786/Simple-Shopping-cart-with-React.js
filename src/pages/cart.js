@@ -1,16 +1,19 @@
+import { render } from "react-dom";
+import App from "../App";
+
 function Cart(props) {
-    const { cartItems, onAdd, onRemove } = props;
+    var { cartItems, onAdd, onRemove } = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
     const shippingPrice = 50;
     const totalPrice = itemsPrice + shippingPrice;
     
     return (
-        <div id="main">
+        <div id="cart">
             <div>
                 <h2 id='title'>Shopping Cart</h2>
             </div>
             <hr/>
-            <div>
+            <div style={{'marginTop':'1.5rem'}}>
                 {cartItems.length === 0 && <div id='empty'>Cart is Empty</div>}
                 {cartItems.map((item) => (
                     <div key={item.id} className="col-2">
@@ -50,7 +53,15 @@ function Cart(props) {
                         </div>
                         <hr />
                         <div>
-                            <button id="checkout" onClick={() => alert('Pay '+totalPrice.toFixed(2)+' Taka.\n Thank You')}>CHECKOUT</button>
+                            <button id="checkout" onClick={() => {
+                                if(window.confirm("Pay "+totalPrice.toFixed(2)+" Taka?")) {
+                                    alert('Thank You');
+                                    cartItems.length = 0;
+                                    render(<App></App>,document.getElementById('root'));
+                                }
+                                else 
+                                    alert('Please Pay The Bill..!')}}>Proceed to Checkout
+                            </button>
                         </div>
                     </>
                 )}
